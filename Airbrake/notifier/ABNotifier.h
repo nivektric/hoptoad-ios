@@ -111,6 +111,15 @@ extern NSString * const ABNotifierDidPostNoticesNotification;
            installSignalHandler:(BOOL)signal
               displayUserPrompt:(BOOL)display;
 
++ (void) startNotifierWithAPIKey:(NSString *) key
+                 environmentName:(NSString *) name
+                          useSSL:(BOOL) useSSL
+                        delegate:(id <ABNotifierDelegate>) delegate
+         installExceptionHandler:(BOOL) exception
+            installSignalHandler:(BOOL) signal
+               displayUserPrompt:(BOOL) display
+                notifierHostName:(NSString *) hostName;
+
 /*
  
  Methods to expose some variables used by the notifier.
